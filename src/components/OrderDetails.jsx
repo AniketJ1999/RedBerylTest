@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { TrashIcon, PrinterIcon, EditIcon, XIcon } from 'lucide-react';
+import { FiPhone,FiMail } from "react-icons/fi";
+
 export const OrderDetails = ({
   order
 }) => {
@@ -77,12 +79,14 @@ export const OrderDetails = ({
           
         </div>
         <div className='border p-4 flex flex-col gap-2 rounded-lg h-40' >
-          <span>{order.placedBy || 'Mayuri Chavan'}</span><hr />
-          <span>{order.contactInfo.phone}</span>
-          <span>{order.contactInfo.email}</span>
+          <span className='flex'><div className="w-8 h-8 rounded-full bg-purple-600 text-white flex items-center justify-center text-sm mr-3">
+            MC
+          </div>{order.placedBy || 'Mayuri Chavan'}</span><hr />
+          <span className='flex items-center gap-3'><FiPhone className='text-blue-700'/>{order.contactInfo.phone}</span>
+          <span className='flex items-center gap-3'><FiMail className='text-blue-700'/>{order.contactInfo.email}</span>
         </div>
         </div>
-        
+
         <div className="flex items-center border-b border-gray-200 mt-6">
           <TabButton label="Order Details" active={activeTab === 'orderDetails'} onClick={() => setActiveTab('orderDetails')} />
           <TabButton label="Order Preview" active={activeTab === 'orderPreview'} onClick={() => setActiveTab('orderPreview')} />
@@ -129,7 +133,6 @@ export const OrderDetails = ({
             <div className="p-6">
               <div className="flex justify-between items-start mb-8">
                 <div>
-                  <img src="https://i.imgur.com/2XUx7Nj.png" alt="vState Filings" className="h-8 mb-4" />
                   <p className="text-gray-600">123 Business Avenue</p>
                   <p className="text-gray-600">Suite 100</p>
                   <p className="text-gray-600">New York, NY 10001</p>

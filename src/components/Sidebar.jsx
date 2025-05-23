@@ -1,32 +1,36 @@
 import React from 'react';
-import { LayoutDashboardIcon, ShoppingCartIcon, BuildingIcon, UsersIcon, HelpCircleIcon } from 'lucide-react';
+import { ShoppingCartIcon} from 'lucide-react';
+import { RxDashboard } from "react-icons/rx";
+import { TbBuildings, TbSettings } from "react-icons/tb";
+import { FiUsers } from "react-icons/fi";
+
 export const Sidebar = () => {
   return <div className="sidebar">
-    <nav className="mt-6">
+    <nav >
 
       <div className='sidebar-tab'>
-        <div className=" text-gray-400"><LayoutDashboardIcon size={20} /></div>
+        <div className=" text-gray-400"><RxDashboard size={20} /></div>
         <span className="font-medium">Dashboard</span>
-      </div>;
+      </div>
       
       <div className='sidebar-tab active'>
-        <div className=" text-blue-500"><ShoppingCartIcon size={20} /></div>
-        <span className="font-medium text-blue-500">Orders</span>
-      </div>;
+        <div ><ShoppingCartIcon size={20} /></div>
+        <span className="font-medium">Orders</span>
+      </div>
 
       <div className='sidebar-tab'>
-        <div className=" text-gray-400"><BuildingIcon size={20} /></div>
+        <div className=" text-gray-400"><TbBuildings size={20} /></div>
         <span className="font-medium">Companies</span>
-      </div>;
+      </div>
 
       <div className='sidebar-tab'>
-        <div className=" text-gray-400"><UsersIcon size={20} /></div>
+        <div className=" text-gray-400"><FiUsers size={20} /></div>
         <span className="font-medium">Users</span>
-      </div>;
+      </div>
       <div className='sidebar-tab'>
-        <div className=" text-gray-400"><HelpCircleIcon size={20} /></div>
+        <div className=" text-gray-400"><TbSettings size={20} /></div>
         <span className="font-medium">Help</span>
-      </div>;
+      </div>
 
 
 

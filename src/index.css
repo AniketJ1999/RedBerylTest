@@ -9,7 +9,7 @@
 }
 .app{
     display: flex;
-    background-color: #dadada;
+    background-color: #e3e7ed;
 }
 
 .header{
@@ -49,13 +49,19 @@
     position: fixed;
     border-top-right-radius: 4px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    
+   
 }
 
 
 .sidebar-tab{
+    height: 100px;
     gap: 10px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center ;
     cursor: pointer;
    
@@ -69,8 +75,8 @@
     color: gray;
 }
 .active{
-    background-color: rgb(235, 237, 251);
-    
+    background-color: #f0f5ff;
+    color: #7296e1;
 }
 
 
